@@ -14,8 +14,10 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME,
 });
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function () {
+  console.log(`Server running on port ${port}`);
+});
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
