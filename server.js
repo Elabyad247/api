@@ -14,8 +14,8 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME,
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.listen(3001, () => {
+  console.log("Server is running on port 3001");
 });
 
 app.get("/courses", (req, res) => {
